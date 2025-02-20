@@ -1,0 +1,11 @@
+{
+    "domain": "family_calendar_sync",
+    "name": "Family Calendar Sync",
+    "version": "0.0.1",
+    "documentation": "https://github.com/mccroden/family_calendar_sync",
+    "issue_tracker": "https://github.com/McCroden/family_calendar_sync/issues",
+    "dependencies": ["calendar", "local_calendar"],
+    "after_dependencies": ["caldav", "ical", "local_calendar"],
+    "requirements": [],
+    "codeowners": ["@mccroden"]
+  }

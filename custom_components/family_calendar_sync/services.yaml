@@ -1,0 +1,2 @@
+sync:
+  description: "Syncs events between a parent calendar to a child calendar."

@@ -1,0 +1,48 @@
+family_calendar_sync:
+  options:
+    days_to_sync: 7
+    ignore_event_if_title_starts_with: '!'
+  parent:
+    - entity_id: calendar.calendar_shared
+    - entity_id: calendar.shared_calendar
+  child:
+    - entity_id: calendar.dad
+      copy_all_from:
+        entity_id: calendar.calendar_shared
+      keywords:
+        - dad
+        - stu
+        - stuart
+        - family
+    - entity_id: calendar.mom
+      copy_all_from:
+        entity_id: calendar.shared_calendar
+      keywords:
+        - mom
+        - chelsey
+        - chels
+        - family
+    - entity_id: calendar.joss
+      keywords:
+        - joss
+        - family
+        - kids
+        - kiddos
+    - entity_id: calendar.silas
+      keywords:
+        - silas
+        - family
+        - kids
+        - kiddos
+    - entity_id: calendar.dawsyn
+      keywords:
+        - dawsyn
+        - family
+        - kids
+        - kiddos
+    - entity_id: calendar.jax
+      keywords:
+        - jax
+        - family
+        - kids
+        - kiddos

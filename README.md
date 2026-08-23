@@ -21,7 +21,7 @@ I saw the Skylight calendar and thought it looked cool. But I didn't like that I
 
 ### Our Family's Process
 
-I have an iCloud calendar and I Share it with my partner. My partner also has an iCloud calendar and Shares it with me. This is useful because if my partner adds an event titled "Dentist," I know there's a dentist appointment coming up. When my partner or I create events for the kids we put their name in the event. I built this component to look for keywords (e.g. their name) and copy those events to their calendars. I put a couple of buttons on my Home Assistant dashboard to run the sync manually, but you can also set up an automation to run it on a schedule.
+I have an iCloud calendar and I Share it with my partner. My partner also has an iCloud calendar and Shares it with me. This is useful because if my partner adds an event titled "Dentist," I know there's a dentist appointment coming up.
 
 When my partner or I create events for the kids we put their name in the event. I built this component to look for keywords (e.g. their name) and copy those events to their calendars. I put a couple of buttons on my Home Assistant dashboard to run the sync manually, but you can also set up an automation to run it on a schedule.
 
@@ -96,7 +96,7 @@ Type: List
         - `entity_id`:
             - **Type**: String
             - **Description**: The unique identifier of a child calendar (e.g., calendar.dad).
-        - `copy_all_from` (optional):
+        - `copy_all_from (optional)`:
             - **Type**: List
             - **Description**: Specifies the parent calendar(s) from which to copy all events from. Contains:
                 - `entity_id`:

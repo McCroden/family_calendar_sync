@@ -1,8 +1,8 @@
 # family_calendar_sync
 
-[Family Calendar Sync](https://github.com/McCroden/family_calendar_sync) is a custom component for Home Assistant that will sync `parent` calendars to `child` calendars. It also keeps the calendars[...]
+[Family Calendar Sync](https://github.com/McCroden/family_calendar_sync) is a custom component for Home Assistant that will sync `parent` calendars to `child` calendars. It also keeps the calendars in sync with the parent calendars.
 
-The idea is to read from one or more `parent` calendar entities then copy the events to one or more `child` calendar entities. All of the events can be copied. Or just those that match a simple lis[...]
+The idea is to read from one or more `parent` calendar entities then copy the events to one or more `child` calendar entities. All of the events can be copied. Or just those that match a simple list of keywords.
 
 **Which Calendar Integrations Work?**
 
@@ -17,13 +17,13 @@ The idea is to read from one or more `parent` calendar entities then copy the ev
 
 ## Background
 
-I saw the Skylight calendar and thought it looked cool. But I didn't like that I'd have to use their app to attach the events to a child's calendars. My partner and I already have a good system in[...]
+I saw the Skylight calendar and thought it looked cool. But I didn't like that I'd have to use their app to attach the events to a child's calendars. My partner and I already have a good system in place. Our iCloud calendars are shared and we just manually put our kids' names in events that are relevant to them. I built this component to automate that process.
 
 ### Our Family's Process
 
-I have an iCloud calendar and I Share it with my partner. My partner also has an iCloud calendar and Shares it with me. This is useful because if my partner adds an event titled "Dentist," I know [...]
+I have an iCloud calendar and I Share it with my partner. My partner also has an iCloud calendar and Shares it with me. This is useful because if my partner adds an event titled "Dentist," I know there's a dentist appointment coming up. When my partner or I create events for the kids we put their name in the event. I built this component to look for keywords (e.g. their name) and copy those events to their calendars. I put a couple of buttons on my Home Assistant dashboard to run the sync manually, but you can also set up an automation to run it on a schedule.
 
-When my partner or I create events for the kids we put their name in the event. I built this component to look for keywords (e.g. their name) and copy those events to their calendars. I put a coup[...]
+When my partner or I create events for the kids we put their name in the event. I built this component to look for keywords (e.g. their name) and copy those events to their calendars. I put a couple of buttons on my Home Assistant dashboard to run the sync manually, but you can also set up an automation to run it on a schedule.
 
 ## Features
 
@@ -42,7 +42,7 @@ This component is installed via [HACS](https://hacs.xyz).
 ### Method 1
 
 1. Install HACS first
-1. Click this button [![Open in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=mccroden&repository=family_calendar_syn[...]
+1. Click this button [![Open in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=mccroden&repository=family_calendar_sync)
 1. Click **Download** in the lower-right corner. Or, in the upper-right, click **⁝** > **Download**
 1. Restart Home Assistant
 

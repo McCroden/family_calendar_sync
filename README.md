@@ -1,8 +1,8 @@
 # family_calendar_sync
 
-[Family Calendar Sync](https://github.com/McCroden/family_calendar_sync) is a custom component for Home Assistant that will sync `parent` calendars to `child` calendars. It also keeps the calendars in sync---create an automation using the `family_calendar_sync` service on a recurring basis.
+[Family Calendar Sync](https://github.com/McCroden/family_calendar_sync) is a custom component for Home Assistant that will sync `parent` calendars to `child` calendars. It also keeps the calendars[...]
 
-The idea is to read from one or more `parent` calendar entities then copy the events to one or more `child` calendar entities. All of the events can be copied. Or just those that match a simple list of keywords, such as a name. It keeps them in sync by computing a hash of the `parent` calendar events and storing the first 8 characters of the hash in the description of the event on the `child` calendar.
+The idea is to read from one or more `parent` calendar entities then copy the events to one or more `child` calendar entities. All of the events can be copied. Or just those that match a simple lis[...]
 
 **Which Calendar Integrations Work?**
 
@@ -17,13 +17,13 @@ The idea is to read from one or more `parent` calendar entities then copy the ev
 
 ## Background
 
-I saw the Skylight calendar and thought it looked cool. But I didn't like that I'd have to use their app to attach the events to a child's calendars. My partner and I already have a good system in place that we like. I built this tool to automate it, so our kids can see their events.
+I saw the Skylight calendar and thought it looked cool. But I didn't like that I'd have to use their app to attach the events to a child's calendars. My partner and I already have a good system in[...]
 
 ### Our Family's Process
 
-I have an iCloud calendar and I Share it with my partner. My partner also has an iCloud calendar and Shares it with me. This is useful because if my partner adds an event titled "Dentist," I know it's for them. This came in handy when designing this component too because I can just say copy all of the events from my shared calendar to my local calendar named dad (see the example config for the `copy_all_from` config option). 
+I have an iCloud calendar and I Share it with my partner. My partner also has an iCloud calendar and Shares it with me. This is useful because if my partner adds an event titled "Dentist," I know [...]
 
-When my partner or I create events for the kids we put their name in the event. I built this component to look for keywords (e.g. their name) and copy those events to their calendars. I put a couple examples in the Example Configuration section below.
+When my partner or I create events for the kids we put their name in the event. I built this component to look for keywords (e.g. their name) and copy those events to their calendars. I put a coup[...]
 
 ## Features
 
@@ -42,7 +42,7 @@ This component is installed via [HACS](https://hacs.xyz).
 ### Method 1
 
 1. Install HACS first
-1. Click this button [![Open in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=mccroden&repository=family_calendar_sync&category=integration)
+1. Click this button [![Open in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=mccroden&repository=family_calendar_syn[...]
 1. Click **Download** in the lower-right corner. Or, in the upper-right, click **⁝** > **Download**
 1. Restart Home Assistant
 
@@ -96,15 +96,15 @@ Type: List
         - `entity_id`:
             - **Type**: String
             - **Description**: The unique identifier of a child calendar (e.g., calendar.dad).
-        - `copy_all_from (optional)`:
+        - `copy_all_from` (optional):
             - **Type**: List
             - **Description**: Specifies the parent calendar(s) from which to copy all events from. Contains:
                 - `entity_id`:
                     - **Type**: String
                     - **Description**: The unique identifier of the parent calendar.
-        - `keywords`:
+        - `keywords` (optional):
             - **Type**: List of Strings
-            - **Description**: A list of keywords used as a case-insensitive search filter against the title's of `parent` events.
+            - **Description**: A list of keywords used as a case-insensitive search filter against the title's of `parent` events. If not specified, only events from calendars listed in `copy_all_from` will be synced. Default is an empty list.
 
 ### Example `configuration.yaml`
 
@@ -218,4 +218,3 @@ After:
       copy_all_from:
         - calendar.napoleon_dynamite
 ```
-

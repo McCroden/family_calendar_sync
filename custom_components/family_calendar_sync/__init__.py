@@ -84,7 +84,7 @@ CHILD_SCHEMA = vol.Schema(
     {
         # "name" is optional for some child entries.
         vol.Required("entity_id"): cv.entity_id,
-        vol.Required("keywords"): vol.All(cv.ensure_list, [cv.string]),
+        vol.Optional("keywords", default=[]): vol.All(cv.ensure_list, [cv.string]),
         vol.Optional("copy_all_from"): COPY_ALL_FROM_SCHEMA,
     }
 )
